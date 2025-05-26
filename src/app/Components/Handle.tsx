@@ -1,7 +1,7 @@
 "use client";
 
-import { Canvas, useFrame } from "@react-three/fiber";
-import React, { useRef, useEffect, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import React, {useEffect, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Cube({ scrollY = 0 }) {

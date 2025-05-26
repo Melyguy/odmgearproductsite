@@ -8,27 +8,31 @@ export default function Sidescroller(){
     const { scrollYProgress } = useScroll({
         target: targetRef as React.RefObject<HTMLElement>,
     });
-    const x = useTransform(scrollYProgress, [0, 1], ["75%", "-150%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["90%", "-150%"]);
     return (
         <section ref={targetRef} className="relative h-[300vh]">
             <div className="h-screen top-0 overflow-hidden flex items-center justify-center">
-                <h1 className="text-9xl text-black font-bold">As seen on</h1>
+                <h1 className="text-5xl text-black font-bold md:text-9xl">As seen on</h1>
             </div>
 
             <div className="h-screen top-0 sticky overflow-hidden flex items-center">
-                <motion.div style={{ x }} className={"flex gap-10"}>
-                    <div className="w-96 h-96 bg-red-500 flex-shrink-0"></div>
-                    <div className="w-96 h-96 bg-red-500 flex-shrink-0"></div>
-                    <div className="w-96 h-96 bg-red-500 flex-shrink-0"></div>
-                    <div className="w-96 h-96 bg-red-500 flex-shrink-0"></div>
-                    <div className="w-96 h-96 bg-red-500 flex-shrink-0"></div>
-                    <div className="w-96 h-96 bg-red-500 flex-shrink-0"></div>
-                    <div className="w-96 h-96 bg-red-500 flex-shrink-0"></div>
-                    <div className="w-96 h-96 bg-red-500 flex-shrink-0"></div>
-                    <div className="w-96 h-96 bg-red-500 flex-shrink-0"></div>
-                    <div className="w-96 h-96 bg-red-500 flex-shrink-0"></div>
-                    <div className="w-96 h-96 bg-red-500 flex-shrink-0"></div>
-                    <div className="w-96 h-96 bg-red-500 flex-shrink-0"></div>
+                <motion.div style={{ x, display: 'flex', gap: '2.5rem' }}>
+                    <div className="w-96 h-96 flex-shrink-0">
+                        <video src="/vid1.mp4" autoPlay loop muted className="rounded-2xl w-full h-full object-cover" />
+                    </div>
+                    <div className="w-96 h-96  flex-shrink-0">
+                    <video src="/vid2.mp4" autoPlay loop muted className="rounded-2xl w-full h-full object-cover" />
+                    </div>
+                    <div className="w-96 h-96  flex-shrink-0">
+                    <video src="/vid3.mp4" autoPlay loop muted className="rounded-2xl w-full h-full object-cover" />
+                    </div>
+                    <div className="w-96 h-96 flex-shrink-0">
+                    <video src="/vid4.mp4" autoPlay loop muted className=" rounded-2xl w-full h-full object-cover" /></div>
+                    <div className="w-96 h-96 flex-shrink-0">
+                    <video src="/vid5.mp4" autoPlay loop muted className=" rounded-2xl w-full h-full object-cover" /></div>
+                    <div className="w-96 h-96 flex-shrink-0">
+                    <video src="/vid8.mp4" autoPlay loop muted className=" rounded-2xl w-full h-full object-cover" />
+                    </div>
 
                 </motion.div>
             </div>
