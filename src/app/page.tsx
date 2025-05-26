@@ -3,6 +3,7 @@ import CanvasComponent from "./Components/Handle";
 import { useEffect } from "react";
 import Lenis from "lenis";
 import Sidescroller from "./Components/Sidescroller";
+import CanvasComponentSwordHolder from "./Components/swordholder";
 
 
 export default function Home() {
@@ -38,8 +39,8 @@ export default function Home() {
         </div>
       </div>
       <Sidescroller />
-      <div className="bg-white h-screen w-full flex items-center justify-center">
-      <h1 className="text-5xl md:text-9xl text-black font-bold">how does it work?</h1></div>
+      <CanvasComponentSwordHolder />
+      <div className="w-full h-screen bg-white"></div>
     </div>
   );
 }
