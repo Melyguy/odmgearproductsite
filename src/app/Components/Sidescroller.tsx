@@ -8,7 +8,7 @@ export default function Sidescroller(){
     const { scrollYProgress } = useScroll({
         target: targetRef as React.RefObject<HTMLElement>,
     });
-    const x = useTransform(scrollYProgress, [0, 1], ["90%", "-150%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["350%", "-150%"]);
     return (
         <section ref={targetRef} className="relative h-[300vh]">
             <div className="h-screen top-0 overflow-hidden flex items-center justify-center">
