@@ -21,7 +21,7 @@ export default function Sidescroller(){
                         <video src="/vid1.mp4" autoPlay loop muted className="rounded-2xl w-full h-full object-cover" />
                     </div>
                     <div className="w-96 h-96 flex-shrink-0">
-                        <video src="/vid1.mp4" autoPlay loop muted className="rounded-2xl w-full h-full object-cover" />
+                        <video src="/vid3.mp4" autoPlay loop muted className="rounded-2xl w-full h-full object-cover" />
                     </div>
                     <div className="w-96 h-96  flex-shrink-0">
                     <video src="/vid6.mp4" autoPlay loop muted className="rounded-2xl w-full h-full object-cover" />

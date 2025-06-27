@@ -77,25 +77,38 @@ export default function CanvasComponentSwordHolder() {
     
     return (
         <div className="w-full h-[300vh] bg-neutral-800">
+                <div className="absolute w-full h-full flex items-center pointer-events-none z-10">
+                    <div>
+                    <h1 className="text-white text-5xl text-center px-4 pointer-events-auto font-semibold">Gas-tanks</h1>
+                    </div>
+                    <div>
+                    <h1 className="text-white text-3xl pointer-events-auto">They power the grappling hooks and let you zoom around using bursts of compressed gas.</h1>
+                    </div>
+                    
+                </div>
             <div className="w-full h-screen top-0 left-0 pointer-events-none sticky">
-                <Canvas 
-                    style={{ 
-                        width: "100%",
-                        height: "100%",
-                        position: "absolute",
-                        overflow: "hidden"
-                    }}
-                    camera={{ 
-                        position: [10, 10, 10], 
-                        fov: 50,
-                        near: 0.1,
-                        far: 1000
-                    }}
-                >
-                    <ambientLight intensity={0.5} />
-                    <directionalLight position={[1, 1, 1]} intensity={10} />
-                    <Cube3 scrollY={scrollY} />
-                </Canvas>
+                <div className="absolute inset-0 z-0">
+ 
+                    <Canvas 
+                        style={{ 
+                            width: "100%",
+                            height: "100%",
+                            position: "absolute",
+                            overflow: "hidden"
+                        }}
+                        camera={{ 
+                            position: [10, 10, 10], 
+                            fov: 50,
+                            near: 0.1,
+                            far: 1000
+                        }}
+                    >
+                        <ambientLight intensity={0.5} />
+                        <directionalLight position={[1, 1, 1]} intensity={10} />
+                        <Cube3 scrollY={scrollY} />
+                    </Canvas>
+                </div>
+
             </div>
         </div>
     );
